@@ -14,3 +14,11 @@ npm install --global rollup @rollup/plugin-commonjs rollup-plugin-node-polyfills
 rollup main.js --file bundle.js --format es --plugin commonjs --plugin node-polyfills
 ```
 
+## ZSH Function
+
+```zsh
+build() {
+	rollup main.js --file bundle.js --format es --plugin commonjs --plugin node-polyfills
+}
+```
+
