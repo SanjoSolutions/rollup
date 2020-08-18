@@ -1,5 +1,7 @@
 # Rollup
 
+This work is devoted to God.
+
 ## Installing
 
 ```sh
