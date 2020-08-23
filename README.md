@@ -26,7 +26,20 @@ rollup main.js --file bundle.js --format cjs --plugin commonjs
 
 ```zsh
 build() {
-	rollup main.js --file bundle.js --format es --plugin commonjs --plugin node-polyfills
+  rollup "$1" --file `basename "$1" .js`.bundle.js --format es --plugin commonjs --plugin node-polyfills
+}
+
+build_cjs() {
+  rollup "$1" --file `basename "$1" .js`.bundle.cjs --format cjs --plugin commonjs
 }
 ```
 
+### Usage
+
+```zsh
+build test.js
+```
+
+```zsh
+build_cjs test.js
+```
